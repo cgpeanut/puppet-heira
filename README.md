@@ -22,13 +22,13 @@
 
 3. Set up Hiera to filter by OS family:
 
-# - $ sudo vim hiera.yaml
+- $ sudo vim hiera.yaml
+(
+hierarchy:
+ - name: 'Operating System Family'
+   path: '%{facts.os.family}-family.yaml'
 
-#  hierarchy:
-# - name: 'Operating System Family'
-#   path: '%{facts.os.family}-family.yaml'
-
-# - name: 'common'
-#   path: 'common.yaml'
-
+ - name: 'common'
+   path: 'common.yaml'
+)
 - Save and Exit
